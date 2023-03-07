@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Edweis/sangria#readme",
   "dependencies": {
+    "lodash-es": "^4.17.21",
+    "nanoid": "^4.0.1",
     "np": "^7.6.3"
   },
   "devDependencies": {
