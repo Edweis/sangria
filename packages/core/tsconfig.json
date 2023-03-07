@@ -10,8 +10,8 @@
       "skipDefaultLibCheck": true,
       "moduleResolution": "node16",
       "experimentalDecorators": true,
-      "rootDir": "./src",
+      "rootDir": "packages/core/src",
     },
-    "include": ["src"],
+    "include": ["packages/core/src"],
     "exclude": ["**/node_nodules", "dist"]
-  }
+}

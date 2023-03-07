@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import Sangria from './core.js';
-import type { Middleware } from './core.js';
+import Sangria from './index.js';
+import type { Middleware } from './index.js';
 
 // jest.mocdk('nanoid');
 // const mockNanoid = mocked(nanoid);
