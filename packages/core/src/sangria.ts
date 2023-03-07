@@ -202,8 +202,8 @@ export default class Sangria<
 	handle(
 		fn: (event: Input, traceKey?: string) => Promise<Output>,
 	): (event: FirstParentInput) => Promise<FirstParentOutput> {
-		// @ts-expect-errord
-		if (this.Parent == null) {
+        if (this.Parent == null) {
+            // @ts-expect-errord
 			return fn;
 		}
 
@@ -225,7 +225,6 @@ export default class Sangria<
 					traceKey,
 				);
 
-				// @ts-expect-error
 				return parsedResult as FirstParentOutput;
 			} catch (error: any) {
 				return this.handleError(error, traceKey);
