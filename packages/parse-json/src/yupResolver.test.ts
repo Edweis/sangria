@@ -6,22 +6,21 @@ describe('yupResolver', () => {
   const resolver = yupResolver(
     yup.object({ hello: yup.number().required() }).required(),
   );
-  it('should fail for empty', () => {
-    expect(() => resolver({})).toThrowError('hello is a required field');
+  it('should fail for empty', async () => {
+    await expect(() => resolver({})).rejects.toEqual(
+      'hello is a required field',
+    );
   });
-  it('should fail for valid string', () => {
+  it('should work for valid string', async () => {
     const str = JSON.stringify({ hello: 123 });
-    expect(() => resolver(str)).not.toThrow();
+    expect(await resolver(str)).toEqual({ hello: 123 });
   });
-  it('should fail for undefined', () => {
-    expect(() => resolver(null)).toThrow();
-    expect(() => resolver(undefined)).toThrow();
+  it('should fail for undefined', async () => {
+    await expect(() => resolver(null)).rejects.toBeTruthy();
+    await expect(() => resolver(undefined)).rejects.toBeTruthy();
   });
-  it('should work for valid json', () => {
-    expect(() => resolver({ hello: 123 })).not.toThrow();
-  });
-  it('should work for valid string', () => {
+  it('should work for valid string', async () => {
     const str = JSON.stringify({ hello: 123 });
-    expect(resolver(str)).toEqual({ hello: 123 });
+    expect(await resolver(str)).toEqual({ hello: 123 });
   });
 });

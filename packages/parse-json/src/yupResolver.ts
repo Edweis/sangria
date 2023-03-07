@@ -1,4 +1,4 @@
-import type { Asserts, BaseSchema } from 'yup';
+import { Asserts, BaseSchema, ValidationError } from 'yup';
 
 const safeParse = (body: Record<string, unknown> | string | undefined) => {
   if (body == null) return {};
@@ -7,7 +7,12 @@ const safeParse = (body: Record<string, unknown> | string | undefined) => {
 };
 export const yupResolver =
   <T extends BaseSchema>(schema: T) =>
-  (data: any) => {
+  async (data: any) => {
     const json = safeParse(data);
-    return schema.validateSync(json) as Asserts<T>;
+    try {
+      return (await schema.validate(json)) as Asserts<T>;
+    } catch (err: unknown) {
+      if (err instanceof ValidationError) throw err.errors.join(','); // format error message
+      throw err;
+    }
   };
