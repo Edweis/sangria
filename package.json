@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Edweis/sangria/issues"
   },
-  "homepage": "https://github.com/Edweis/sangria#readme"
+  "homepage": "https://github.com/Edweis/sangria#readme",
+  "dependencies": {
+    "np": "^7.6.3"
+  }
 }
