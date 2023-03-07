@@ -62,13 +62,13 @@ export default class Sangria<
 
   private Parent:
     | Sangria<
-        ParentInput,
-        ParentOutput,
-        any,
-        any,
-        FirstParentInput,
-        FirstParentOutput
-      >
+      ParentInput,
+      ParentOutput,
+      any,
+      any,
+      FirstParentInput,
+      FirstParentOutput
+    >
     | undefined;
   // private Parent: Sangria<SuperInput, SuperOutput>=
 
@@ -241,24 +241,5 @@ export default class Sangria<
     };
   }
 
-  handleMap<T>(
-    mapper: Output extends void ? (event: Input) => Array<T> : never,
-    fn: Parameters<
-      Sangria<
-        T,
-        any,
-        ParentInput,
-        ParentOutput,
-        FirstParentInput,
-        FirstParentOutput
-      >['handle']
-    >[0],
-    options: Options = { concurrency: 1 },
-  ) {
-    // @ts-ignore
-    return this.handle(async (event) => {
-      await pMap(mapper(event), (item) => fn(item), options);
-    });
-  }
-}
  
+}

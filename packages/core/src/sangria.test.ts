@@ -2,10 +2,6 @@ import { describe, it, expect } from 'vitest';
 import Sangria from './index.js';
 import type { Middleware } from './index.js';
 
-// jest.mocdk('nanoid');
-// const mockNanoid = mocked(nanoid);
-
-// mockNanoid.mockImplementation(() => Math.random().toString());
 
 describe('Sangria', () => {
   const middleware1: Middleware<string, string[], number[], number> = {
@@ -233,4 +229,5 @@ describe('Sangria', () => {
       expect(keys[0]).not.toEqual(keys[1]);
     });
   });
+
 });
