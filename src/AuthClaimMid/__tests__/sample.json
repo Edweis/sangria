@@ -1,0 +1,113 @@
+{
+    "resource": "/api/users/create",
+    "path": "/api/users/create",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "Bearer eyJraWQiOiJHbEwwWHUrMEZYUDNiajZYWnBnXC8wOFBoQzA1Qzcrd1BQeVZpdHlGdmlOMD0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI2MDg2NjkwMS0zYjFlLTQ0ZDYtYmQ5Ny1iNWM1YWE5NzU3OTEiLCJjdXN0b206dmVuZG9yIjoiTWFyaW8iLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtc291dGhlYXN0LTEuYW1hem9uYXdzLmNvbVwvYXAtc291dGhlYXN0LTFfUkc1dUxLUzU4IiwiY29nbml0bzp1c2VybmFtZSI6IjYwODY2OTAxLTNiMWUtNDRkNi1iZDk3LWI1YzVhYTk3NTc5MSIsIm9yaWdpbl9qdGkiOiI5OTlhZjEyNC02NTUyLTQxYTUtYTZlNC0xODRiMTQzYTZlNTEiLCJhdWQiOiI0ZGVnZGFvaHA0dTlvN2RodWs1MjkxbDhwMyIsImV2ZW50X2lkIjoiYmUwYTFmOGMtMDcyYy00NjI3LTllM2QtN2EyMDYxZTJkMzI4IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2Nzc0NTg0ODQsImV4cCI6MTY3NzQ2MjA4NCwiY3VzdG9tOnBlcm1pc3Npb25zIjoicmVhZF9vcmRlcnMsd3JpdGVfb3JkZXJzLHJlYWRfcHJvZHVjdHMsd3JpdGVfcHJvZHVjdHMscmVhZF9hY2NvdW50cyx3cml0ZV9hY2NvdW50cyxyZWFkX2ludGVncmF0aW9ucyx3cml0ZV9pbnRlZ3JhdGlvbnMsc3dpdGNoX3ZlbmRvciIsImlhdCI6MTY3NzQ1ODQ4NCwiY3VzdG9tOnN0b3JlIjoiZ2FybmV0LXRlc3QxIiwianRpIjoiZTM2MTdhYTQtZWRlNy00YTEwLWJmNTMtNThmYzNlYWM3YWQ1IiwiZW1haWwiOiJmcmFuY29pcysxMjcwMkBnYXJuZXQuY2VudGVyIn0.WbNneYQjpxRNQNto9PPCTTYoTcXqd88pZySCgexLclcY6s5FqbVB8xe5zPRv_DUWLtcfKNKcbQ-tccqnw3I5bxIwDJV5NfM88s4kNKlyjA6DNRTYpMCsEOf8mbRFaNyQkoMwpurOhq509WYerYb42W6FHI25J5nN5qXuFWkW_q4Air5EsxkPyPPzrikbaB-MvrilM9qQJwsVR4vq54BJ34QTfkLL7mX1Oq55YVf7iJrpXAyWH03X2s7UUZQC51CXlvBNMge_T5MzpfjO0cN5n58zAQbUruLPpoXSZvukD2lChy6ruKAF1ntIe6YciIUsQsac7uc5ea5hxxBbP1ULpA",
+        "content-type": "application/json",
+        "dnt": "1",
+        "from-origin": "12321",
+        "Host": "api.garnet.center",
+        "origin": "https://garnet.center",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Amazon CloudFront",
+        "Via": "2.0 35ca6aa74c5646f0333fa6da149920ce.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "wJaLYtVHoYbmtAy3mAJD5s1VbxOgZCKqETdcUo5C9yLBBvewlIxSQQ==",
+        "X-Amzn-Trace-Id": "Root=1-63fc0375-5ff511b702ec2e7c06def363",
+        "X-Forwarded-For": "180.232.87.138, 64.252.136.135",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Authorization": [
+            "Bearer eyJraWQiOiJHbEwwWHUrMEZYUDNiajZYWnBnXC8wOFBoQzA1Qzcrd1BQeVZpdHlGdmlOMD0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI2MDg2NjkwMS0zYjFlLTQ0ZDYtYmQ5Ny1iNWM1YWE5NzU3OTEiLCJjdXN0b206dmVuZG9yIjoiTWFyaW8iLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtc291dGhlYXN0LTEuYW1hem9uYXdzLmNvbVwvYXAtc291dGhlYXN0LTFfUkc1dUxLUzU4IiwiY29nbml0bzp1c2VybmFtZSI6IjYwODY2OTAxLTNiMWUtNDRkNi1iZDk3LWI1YzVhYTk3NTc5MSIsIm9yaWdpbl9qdGkiOiI5OTlhZjEyNC02NTUyLTQxYTUtYTZlNC0xODRiMTQzYTZlNTEiLCJhdWQiOiI0ZGVnZGFvaHA0dTlvN2RodWs1MjkxbDhwMyIsImV2ZW50X2lkIjoiYmUwYTFmOGMtMDcyYy00NjI3LTllM2QtN2EyMDYxZTJkMzI4IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2Nzc0NTg0ODQsImV4cCI6MTY3NzQ2MjA4NCwiY3VzdG9tOnBlcm1pc3Npb25zIjoicmVhZF9vcmRlcnMsd3JpdGVfb3JkZXJzLHJlYWRfcHJvZHVjdHMsd3JpdGVfcHJvZHVjdHMscmVhZF9hY2NvdW50cyx3cml0ZV9hY2NvdW50cyxyZWFkX2ludGVncmF0aW9ucyx3cml0ZV9pbnRlZ3JhdGlvbnMsc3dpdGNoX3ZlbmRvciIsImlhdCI6MTY3NzQ1ODQ4NCwiY3VzdG9tOnN0b3JlIjoiZ2FybmV0LXRlc3QxIiwianRpIjoiZTM2MTdhYTQtZWRlNy00YTEwLWJmNTMtNThmYzNlYWM3YWQ1IiwiZW1haWwiOiJmcmFuY29pcysxMjcwMkBnYXJuZXQuY2VudGVyIn0.WbNneYQjpxRNQNto9PPCTTYoTcXqd88pZySCgexLclcY6s5FqbVB8xe5zPRv_DUWLtcfKNKcbQ-tccqnw3I5bxIwDJV5NfM88s4kNKlyjA6DNRTYpMCsEOf8mbRFaNyQkoMwpurOhq509WYerYb42W6FHI25J5nN5qXuFWkW_q4Air5EsxkPyPPzrikbaB-MvrilM9qQJwsVR4vq54BJ34QTfkLL7mX1Oq55YVf7iJrpXAyWH03X2s7UUZQC51CXlvBNMge_T5MzpfjO0cN5n58zAQbUruLPpoXSZvukD2lChy6ruKAF1ntIe6YciIUsQsac7uc5ea5hxxBbP1ULpA"
+        ],
+        "content-type": [
+            "application/json"
+        ],
+        "dnt": [
+            "1"
+        ],
+        "from-origin": [
+            "12321"
+        ],
+        "Host": [
+            "api.garnet.center"
+        ],
+        "origin": [
+            "https://garnet.center"
+        ],
+        "sec-fetch-dest": [
+            "empty"
+        ],
+        "sec-fetch-mode": [
+            "cors"
+        ],
+        "sec-fetch-site": [
+            "same-origin"
+        ],
+        "User-Agent": [
+            "Amazon CloudFront"
+        ],
+        "Via": [
+            "2.0 35ca6aa74c5646f0333fa6da149920ce.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "wJaLYtVHoYbmtAy3mAJD5s1VbxOgZCKqETdcUo5C9yLBBvewlIxSQQ=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-63fc0375-5ff511b702ec2e7c06def363"
+        ],
+        "X-Forwarded-For": [
+            "180.232.87.138, 64.252.136.135"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "5gryhw",
+        "resourcePath": "/api/users/create",
+        "httpMethod": "POST",
+        "extendedRequestId": "A-V6dGH4SQ0FkUQ=",
+        "requestTime": "27/Feb/2023:01:12:21 +0000",
+        "path": "/api/users/create",
+        "accountId": "968703698200",
+        "protocol": "HTTP/1.1",
+        "stage": "dev",
+        "domainPrefix": "api",
+        "requestTimeEpoch": 1677460341889,
+        "requestId": "072adfcb-923b-469f-ac07-ab2f64bbe05c",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "180.232.87.138",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "Amazon CloudFront",
+            "user": null
+        },
+        "domainName": "api.garnet.center",
+        "apiId": "bdnsqd90y9"
+    },
+    "body": "{\"email\":\"vendor+ro12703@garnet.center\",\"vendor\":\"Mario\",\"permissions\":[\"read_orders\",\"read_products\",\"read_accounts\"]}",
+    "isBase64Encoded": false
+}

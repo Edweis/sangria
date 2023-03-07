@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Edweis/sangria#readme",
   "dependencies": {
     "np": "^7.6.3"
+  },
+  "devDependencies": {
+    "vitest": "^0.29.2"
   }
 }
