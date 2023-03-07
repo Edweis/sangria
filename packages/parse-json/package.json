@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/Edweis/sangria#readme",
   "dependencies": {
+    "@pantone/sangria": "workspace:*",
+    "ajv": "^8.12.0",
     "nanoid": "^4.0.1",
-    "p-map": "^5.5.0"
+    "p-map": "^5.5.0",
+    "yup": "^0.32.11"
   },
   "files": [
     "src"
-  ],
-  "devDependencies": {
-   
-  }
+  ]
 }

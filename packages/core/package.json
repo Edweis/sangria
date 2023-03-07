@@ -2,7 +2,8 @@
   "name": "@pantone/sangria",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "vitest run --coverage", 
@@ -21,7 +22,7 @@
   "dependencies": {
     "nanoid": "^4.0.1"
   },
-  "files": [
+  "files": ["dist",
     "src"
   ],
   "devDependencies": { 

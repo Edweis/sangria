@@ -1,0 +1,77 @@
+env:
+  browser: true
+  es2020: true
+extends:
+  - airbnb-base
+  - plugin:@typescript-eslint/recommended
+  - prettier
+  - plugin:json/recommended
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 11
+  sourceType: module
+ignorePatterns:
+  - "**/node_modules/**"
+  - "**/assets/**"
+  - "**/dist/**"
+  - "**/coverage/**"
+  - "**/build/**"
+  - "**/.serverless_nextjs/**"
+  - "**/.next/**"
+plugins:
+  - import
+  - prettier
+  - "@typescript-eslint/eslint-plugin"
+  - react-hooks
+  - react
+rules:
+  curly: ["error", "multi"]
+  padding-line-between-statements: "off"
+  "@typescript-eslint/ban-ts-comment": off
+  no-void: ["error", { "allowAsStatement": true }]
+  "@typescript-eslint/explicit-module-boundary-types": off
+  "@typescript-eslint/no-namespace": off
+  "@typescript-eslint/no-unused-vars": warn
+  "import/no-extraneous-dependencies": ["error", { "devDependencies": false }]
+  "@typescript-eslint/no-shadow": ["error", { "ignoreTypeValueShadow": true }]
+  "@typescript-eslint/no-use-before-define": ["error"]
+  "no-shadow": "off"
+  "no-use-before-define": "off"
+  "prefer-destructuring": ["error", { "object": true, "array": false }]
+  "react-hooks/exhaustive-deps": off # Checks effect dependencies
+  "react-hooks/rules-of-hooks": error # Checks rules of Hooks
+  camelcase: off
+  "@typescript-eslint/naming-convention":
+    - error
+    - selector: variable
+      format:
+        - camelCase
+        - UPPER_CASE
+        - PascalCase
+      leadingUnderscore: allow
+    - selector: variable
+      modifiers: [destructured]
+      format:
+        - camelCase
+        - UPPER_CASE
+        - PascalCase
+        - snake_case
+  import/extensions: off
+  import/no-unresolved: off # duplicate with typescript
+  import/prefer-default-export: off
+  jsx-a11y/label-has-associated-control: off
+  jsx-a11y/no-autofocus: off
+  no-console: off
+  prettier/prettier: ["error", { "singleQuote": true, "trailingComma": "all" }]
+overrides:
+  - files: ["*.test.ts", "*.test.tsx", "*.test.js"]
+    rules:
+      "import/first": off # We can order import as we want in jest files. It is useful to set the mock before imports
+      "import/no-extraneous-dependencies": off # We allow common depencies (from monorepo/) in test files, if they are actually missing, test will fail
+
+settings:
+  import/resolver:
+    node:
+      extensions: [".js", ".jsx", ".ts", ".tsx"]

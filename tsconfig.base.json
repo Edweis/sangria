@@ -1,17 +1,19 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "lib": ["ESNext", "DOM"],
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,      
-      "module": "node16", 
-      "strict": true,
-      "skipDefaultLibCheck": true,
-      "moduleResolution": "node16",
-      "experimentalDecorators": true,
-      "rootDir": "packages/core/src",
-    },
-    "include": ["packages/core/src"],
-    "exclude": ["**/node_nodules", "dist"]
+  "compilerOptions": {
+    "outDir": "dist",
+    "lib": ["ESNext", "DOM"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "module": "node16",
+    "strict": true,
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "node16",
+    "experimentalDecorators": true,
+    "rootDir": "packages/core/src",
+    "declaration": true,
+    "sourceMap": true
+  },
+  "include": ["packages/core/src"],
+  "exclude": ["**/node_nodules", "dist"]
 }

@@ -1,0 +1,63 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "yaml.customTags": [
+      "!Equals sequence",
+      "!FindInMap sequence",
+      "!GetAtt",
+      "!GetAZs",
+      "!ImportValue",
+      "!Join sequence",
+      "!Ref",
+      "!Select sequence",
+      "!Split sequence",
+      "!Sub"
+  ],
+  "[yaml]": {
+    "editor.formatOnSave": true
+  },
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/.serverless": true,
+    "**/.webpack": true,
+    "**/dump": true,
+    "**/coverage": true,
+    "**/.next": true,
+    "**/.serverless_nextjs": true,
+    "**/.esbuild": true,
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.serverless": true,
+    "**/.webpack": true,
+    "**/.next": true,
+    "**/.serverless_nextjs": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/coverage": true,
+    "**/dump": true,
+    "**/pnpm-lock.json": true,
+    "**/package-lock.json": true,
+    "**/*.min.*": true,
+    "**/tsconfig.tsbuildinfo": true,
+    "**/.esbuild": true,
+  },
+  "editor.suggest.preview": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "eslint.packageManager": "pnpm",
+  "eslint.workingDirectories": [ { "mode": "auto" } ],
+  "eslint.alwaysShowStatus": false,
+  "eslint.format.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "svg.preview.background": "custom"
+}
