@@ -1,6 +1,6 @@
 import {describe, it, expect} from 'vitest';
-import Sangria from './sangria.js';
-import type {Middleware} from './types.js';
+import Sangria from './index.js';
+import type {Middleware} from './index.js';
 
 describe('Sangria', () => {
 	const middleware1: Middleware<string, string[], number[], number> = {

@@ -1,4 +1,5 @@
-function myFn(text){
-    console.log('myFn: ',text)
+function myFn(text) {
+	console.log('myFn:', text);
 }
-export default myFn
+
+export default myFn;

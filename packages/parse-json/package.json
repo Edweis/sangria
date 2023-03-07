@@ -1,11 +1,11 @@
 {
-  "name": "@pantone/sangria",
+  "name": "@pantone/parse-json",
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "vitest run --coverage", 
+    "test": "vitest run --coverage",
     "build": "del-cli dist && tsc"
   },
   "repository": {
@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/Edweis/sangria#readme",
   "dependencies": {
-    "nanoid": "^4.0.1"
+    "nanoid": "^4.0.1",
+    "p-map": "^5.5.0"
   },
   "files": [
     "src"
   ],
-  "devDependencies": { 
+  "devDependencies": {
+   
   }
 }
